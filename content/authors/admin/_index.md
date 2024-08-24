@@ -65,8 +65,8 @@ education:
     Relevant Courses: COMM 1101 Fundamentals of Public Speaking, CSCI 1100 Fundamentals of Computers"
      
 work:
-  - position: Director of Cloud Infrastructure
-    company_name: GenCoin
+  - company_name: C.H. Robinson
+    position: Data Engineer Job Shadow
     company_url: ''
     company_logo: ''
     date_start: 2021-01-01
@@ -76,8 +76,8 @@ work:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
+  - company_name: Backend Software Engineer
+    position: X
     company_url: ''
     company_logo: ''
     date_start: 2016-01-01
