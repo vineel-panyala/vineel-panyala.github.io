@@ -69,9 +69,9 @@ education:
 work:
   - company_name: C.H. Robinson
     position: Data Engineer Job Shadow
-    company_url: ''
-    company_logo: ''
-    date_start: 2021-01-01
+    company_url: 'https://www.chrobinson.com/en-us/'
+    company_logo: 'static/uploads/CH_Robinson_logo.jpg'
+    date_start: 2024-02-01
     date_end: ''
     summary: |2-
       Responsibilities include:
