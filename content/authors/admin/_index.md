@@ -48,7 +48,21 @@ education:
     institution: Georgia Institute of Technology
     date_start: 2016-01-01
     date_end: 2020-12-31
-    summary: |
+    summary: 
+  - area: Dual Enrollment
+    institution: University of Minnesota
+    date_start: 2023-09-05
+    date_end: 2023-12-21
+    summary: "
+    GPA: 4.00/4.00
+    Relevant Courses: ECON 1101 Principles of Microeconomics, CSCI 1913 Introduction to Algorithms, Data Structures, and Program Development"
+  - area: Dual Enrollment
+    institution: Normandale Community College
+    date_start: 2022-08-01
+    date_end: 2023-12-31
+    summary: "
+    GPA: 4.00/4.00
+    Relevant Courses: COMM 1101 Fundamentals of Public Speaking, CSCI 1100 Fundamentals of Computers"
      
 work:
   - position: Director of Cloud Infrastructure
