@@ -71,8 +71,8 @@ work:
     position: Data Engineer Job Shadow
     company_url: 'https://www.chrobinson.com/en-us/'
     company_logo: 'static/uploads/CH_Robinson_logo.jpg'
-    date_start: 2024-02-01
-    date_end: ''
+    date: 2024-02-01
+
     summary: |2-
       Responsibilities include:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
