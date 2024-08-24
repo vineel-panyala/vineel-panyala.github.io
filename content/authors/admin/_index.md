@@ -150,4 +150,4 @@ awards:
 
 ## Biography
 
-Hello! I am an Information Technology Management Student at Georgia Institute of Technology as a member of the Honors Program. I've worked on a variety of projects from building neural networks to analyze music popularity to developing iOS mobile app business pitches to F500 companies. My interests lie in the intersection of machine learning and back-end development for application in business processes. Feel free to reach out!
+Hello! I am an Information Technology Management Student at Georgia Institute of Technology as a member of the Honors Program. I've worked on a variety of projects from building neural networks to analyze music popularity to developing iOS mobile app business pitches to F500 companies. My interests lie in the intersection of machine learning and back-end development for application in business processes.
