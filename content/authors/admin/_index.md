@@ -33,9 +33,9 @@ profiles:
     url: 'mailto:vp.panyala@gmail.com'
     label: E-mail Me
   - icon: brands/linkedin
-    url: https://www.linkedin.com/
+    url: https://www.linkedin.com/in/vineel-panyala/
   - icon: brands/github
-    url: https://github.com/gcushen
+    url: https://github.com/vineel-panyala
 
 
 interests:
