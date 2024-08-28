@@ -63,7 +63,13 @@ work:
   - company_name: C.H. Robinson
     position: Data Engineer Job Shadow
     company_url: 'https://www.chrobinson.com/en-us/'
-    company_logo: 'static/uploads/CH_Robinson_logo.jpg'  
+    company_logo: 'static/uploads/CH_Robinson_logo.jpg'
+    date_start: 2024-02-01
+    date_end: 2024-02-31
+    summary: |
+      - Assisted data management operations, gaining hands-on experience with SQL & Snowflake data operations
+      - Leveraged Python Scripting in cloud data migration for streamlined operations & Snowflake Integration
+       
   - company_name: Backend Software Engineer
     position: X
     company_url: ''
