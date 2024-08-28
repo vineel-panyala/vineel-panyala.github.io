@@ -48,7 +48,7 @@ education:
     institution: B.SC in Business
       Information Technology Management Concentration
     date_start: 2024-01-01
-    date_end: 2026-12-31
+    date_end: 2026-12-28
     summary: 
   - area: University of Minnesota - Twin Cities
     institution: Dual Enrollment
@@ -83,7 +83,7 @@ work:
     company_url: ''
     company_logo: ''
     date_start: 2023-08-01
-    date_end: 2024-04-31
+    date_end: 2024-04-20
     summary: |
       - Instructed 100+ students core coding concepts by guiding them in 50+ building game-like projects
       - Led 15+ tutor team, Ensuring Parent & Youth Satisfaction with Program
@@ -93,7 +93,7 @@ work:
     company_url: ''
     company_logo: ''
     date_start: 2023-09-01
-    date_end: 2024-04-31
+    date_end: 2024-04-20
     summary: |
       - Assisted AI chatbot development designed for seamless access to mental and emotional health services
       - Advance selection of equity allocation model, identifying 10+ growth opportunities for organization
