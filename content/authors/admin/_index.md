@@ -66,7 +66,6 @@ work:
     company_logo: 'static/uploads/CH_Robinson_logo.jpg'
     date_start: 2024-02-01
     date_end: 2024-02-31
-
     summary: |2-
       - Assisted data management operations, gaining hands-on experience with SQL & Snowflake data operations
       - Leveraged Python Scripting in cloud data migration for streamlined operations & Snowflake Integration
