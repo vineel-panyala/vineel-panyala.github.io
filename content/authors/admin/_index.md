@@ -51,7 +51,7 @@ education:
     date_end: 2026-12-31
     summary: 
   - area: University of Minnesota - Twin Cities
-    institution: University of Minnesota
+    institution: Dual Enrollment
     date_start: 2023-09-05
     date_end: 2023-12-21
     summary: |
@@ -64,13 +64,13 @@ work:
     position: Data Engineer Job Shadow
     company_url: 'https://www.chrobinson.com/en-us/'
     company_logo: 'static/uploads/CH_Robinson_logo.jpg'
-    date: 2024-02-01
+    date_start: 2024-02-01
+    date_end: 2024-02-31
 
     summary: |2-
-      Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - Assisted data management operations, gaining hands-on experience with SQL & Snowflake data operations
+      - Leveraged Python Scripting in cloud data migration for streamlined operations & Snowflake Integration
+      
   - company_name: Backend Software Engineer
     position: X
     company_url: ''
