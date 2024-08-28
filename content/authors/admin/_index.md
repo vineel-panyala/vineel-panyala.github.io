@@ -53,10 +53,17 @@ education:
   - area: University of Minnesota - Twin Cities
     institution: Dual Enrollment
     date_start: 2023-09-05
-    date_end: 2023-12-21
+    date_end: 2024-06-21
     summary: |
     GPA: 4.00/4.00
     Relevant Courses: ECON 1101 Principles of Microeconomics, CSCI 1913 Introduction to Algorithms, Data Structures, and Program Development
+  - area: Normandale Community College
+    institution: Dual Enrollment
+    date_start: 2022-09-05
+    date_end: 2023-12-21
+    summary: |
+    GPA: 4.00/4.00
+    Relevant Courses: CSCI 1100 Fundamentals of Computers, COMM 1101 Fundamentals of Public Speaking
 
      
 work:
