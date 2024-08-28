@@ -63,7 +63,12 @@ work:
   - company_name: C.H. Robinson
     position: Data Engineer Job Shadow
     company_url: 'https://www.chrobinson.com/en-us/'
-    company_logo: static/uploads/CH_Robinson_logo.jpg  
+    company_logo: static/uploads/CH_Robinson_logo.jpg
+    date_start: 2024-02-20
+    date_end: 2024-02-22
+    summary: |
+      - snowflake
+      - python  
   - company_name: Backend Software Engineer
     position: X
     company_url: ''
