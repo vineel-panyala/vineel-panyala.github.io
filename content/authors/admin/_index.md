@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Informaton Technology Management
+role: Informaton Technology Management (MIS)
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
