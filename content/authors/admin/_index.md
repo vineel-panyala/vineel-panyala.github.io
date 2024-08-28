@@ -61,7 +61,7 @@ education:
      
 work:
   - company_name: Machine Learning Research Assistant
-    position: Scheller College of Business - Georgia Tech
+    position: 'Scheller College of Business - Georgia Tech'
     company_url: ''
     company_logo: ''
     date_start: 2024-08-01
@@ -89,7 +89,7 @@ work:
       - Led 15+ tutor team, Ensuring Parent & Youth Satisfaction with Program
       - Languages: C#, JavaScript, Block-Coding
   - company_name: AI/ML & Strategic Planning Intern
-    position: Seeds of Success 501(c)(3) LLC.
+    position: Seeds of Success 501(c)(3) LLC
     company_url: ''
     company_logo: ''
     date_start: 2023-09-01
