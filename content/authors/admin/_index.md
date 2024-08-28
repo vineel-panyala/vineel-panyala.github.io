@@ -60,26 +60,44 @@ education:
 
      
 work:
-  - company_name: C.H. Robinson
-    position: Data Engineer Job Shadow
+  - company_name: Machine Learning Research Assistant
+    position: Scheller College of Business - Georgia Tech
+    company_url: ''
+    company_logo: ''
+    date_start: 2024-08-01
+    date_end:
+    summary: |
+      - Developing Twitter recommendation system clone: SimCluster, TwHIN, HeavyRanker implementations
+      - Using PyTorch & TensorFlow for candidate generation & heuristic filtering for algorithmic understanding
+  - company_name: Data Engineer Job Shadow
+    position: C.H. Robinson
     company_url: 'https://www.chrobinson.com/en-us/'
     company_logo: static/uploads/CH_Robinson_logo.jpg
     date_start: 2024-02-20
     date_end: 2024-02-22
     summary: |
-      - snowflake
-      - python  
-  - company_name: Backend Software Engineer
-    position: X
+      - Assisted data management operations, gaining hands-on experience with SQL & Snowflake data operations
+      - Leveraged Python Scripting in cloud data migration for streamlined operations & Snowflake Integration  
+  - company_name: Computer Science & Game Development Tutor
+    position: Code Ninjas
     company_url: ''
     company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+    date_start: 2023-08-01
+    date_end: 2024-04-31
     summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - Instructed 100+ students core coding concepts by guiding them in 50+ building game-like projects
+      - Led 15+ tutor team, Ensuring Parent & Youth Satisfaction with Program
+      - Languages: C#, JavaScript, Block-Coding
+  - company_name: AI/ML & Strategic Planning Intern
+    position: Seeds of Success 501(c)(3) LLC.
+    company_url: ''
+    company_logo: ''
+    date_start: 2023-09-01
+    date_end: 2024-04-31
+    summary: |
+      - Instructed 100+ students core coding concepts by guiding them in 50+ building game-like projects
+      - Led 15+ tutor team, Ensuring Parent & Youth Satisfaction with Program
+      - Languages: C#, JavaScript, Block-Coding
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
