@@ -95,9 +95,8 @@ work:
     date_start: 2023-09-01
     date_end: 2024-04-31
     summary: |
-      - Instructed 100+ students core coding concepts by guiding them in 50+ building game-like projects
-      - Led 15+ tutor team, Ensuring Parent & Youth Satisfaction with Program
-      - Languages: C#, JavaScript, Block-Coding
+      - Assisted AI chatbot development designed for seamless access to mental and emotional health services
+      - Advance selection of equity allocation model, identifying 10+ growth opportunities for organization
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
