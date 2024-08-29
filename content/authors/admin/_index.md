@@ -127,6 +127,7 @@ skills:
   - name: Tools
   #  color: '#eeac02'
     #color_border: '#f0bf23'
+    spacing: '7rem'
     items:
       - name: VS Code
       - name: Jupyter Notebook
