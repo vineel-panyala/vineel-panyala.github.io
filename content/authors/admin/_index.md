@@ -107,12 +107,12 @@ work:
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Skills
+  - name: '    Skills'
     spacing: '7rem'
     items:
-      - name: Python
-      - name: Java
-      - name: SQL
+      - name: '    Python'
+      - name: '    Java'
+      - name: '    SQL'
       - name: Pandas
       - name: NumPy
       - name: Flask
