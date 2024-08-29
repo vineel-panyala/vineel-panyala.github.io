@@ -120,7 +120,6 @@ skills:
       - name: Swift
       - name: Linux
       - name: JavaScript
-      - name: Agile
   - name: Tools
     color: '#eeac02'
     color_border: '#f0bf23'
@@ -133,6 +132,8 @@ skills:
       - name: Office 365
       - name: Canva
       - name: Figma
+      - name: Agile
+      - name: Snowflake
 
 languages:
   - name: English
