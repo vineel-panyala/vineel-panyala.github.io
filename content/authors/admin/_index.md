@@ -157,6 +157,7 @@ awards:
       Skills: NumPy, Pandas, WebScraping, API, Beautiful Soup
   - title: Georgia Tech Honors Program
     url: https://honorsprogram.gatech.edu/
+    certificate_url: https://honorsprogram.gatech.edu/
     date: '2024-04-01'
     awarder: Georgia Institute of Technology
     #icon: edx
