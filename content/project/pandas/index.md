@@ -1,13 +1,13 @@
 ---
-title: Pandas
-date: 2023-10-26
-external_link: https://github.com/pandas-dev/pandas
+title: NewTunes
+date: 2024-08-23
+external_link: https://github.com/vineel-panyala/NewTunes
 tags:
   - Hugo
   - Wowchemy
   - Markdown
 ---
 
-Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures.
+Trained PyTorch machine learning model system for predicting poluarity of songs based on audio metadata.
 
 <!--more-->
