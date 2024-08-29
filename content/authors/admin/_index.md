@@ -161,7 +161,7 @@ awards:
     awarder: Georgia Institute of Technology
     #icon: edx
     summary: |
-      After additional application after admission, Selected as one of 875 total student out of 26,849 (Top ~ 3%) to be a part of the Honors Program at Georgia Tech
+      After additional application after admission, Selected as one of 875 total student out of 26,849 (Top ~ 3%) to be a part of the Honors Program at Georgia Tech.
   - title:  National Merit Finalist
     url: https://www.nationalmerit.org/s/1758/start.aspx?gid=2&pgid=61
     certificate_url: https://www.edenpr.org/experience/news-publications/stories/articles/~board/homepage-news/post/2024-national-merit-semifinalists
@@ -169,7 +169,23 @@ awards:
     awarder:  National Merit Scholarship Corporation
     #icon: datacamp
     summary: |
-      Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is a great day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
+      Awarded to students who are in the top 0.5% based on their performance on the Preliminary SAT/National Merit Scholarship Qualifying Test (PSAT/NMSQT®) out of around 1.6 million applicants. After additional application processes including essay, activities, and further scores, named as a finalist.
+  - title: Introduction to Software Engineering
+    url: https://coursera.org/share/954ec49c0ce804996185955d8eed2dd7
+    certificate_url: https://coursera.org/share/954ec49c0ce804996185955d8eed2dd7
+    date: '2024-07-15'
+    awarder: IBM
+    #icon: edx
+    summary: |
+      Skills: Software Development LifeCycle, Application & Deployment Architecture, Python
+  - title:  Holasek - Griffiths Scholarship in Business
+    url: https://www.eplocalnews.org/2024/05/28/ep-students-honored-with-community-awards-and-scholarships/
+    certificate_url: https://foundationforepschools.org/students/holasek-griffiths-scholarship-in-computer-science-engineering-and-business/
+    date: '2024-05-26'
+    awarder:  Foundation for Eden Prairie Schools
+    #icon: datacamp
+    summary: |
+      Selected as recipient of $14,000 scholarship awarded to single recipient in Eden Prairie community based upon dedication to a career in Business with a strong consideration to relevant coursework, activities, community services, and employment.
 ---
 
 ## Biography
