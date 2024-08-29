@@ -121,13 +121,9 @@ skills:
       - name: Linux
       - name: JavaScript
       - name: Agile
-      #- name: SQL
-       #description: ''
-        #percent: 40
-       # icon: circle-stack
   - name: Tools
-  #  color: '#eeac02'
-    #color_border: '#f0bf23'
+    color: '#eeac02'
+    color_border: '#f0bf23'
     items:
       - name: VS Code
       - name: Jupyter Notebook
