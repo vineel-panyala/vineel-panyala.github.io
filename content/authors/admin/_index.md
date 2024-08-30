@@ -70,7 +70,7 @@ work:
   - company_name: Machine Learning Research Assistant
     position: 'Scheller College of Business - Georgia Tech'
     company_url: ''
-    company_logo: avatar.jpg
+    company_logo: assets/media/icons/scheller_logo.svg
     date_start: 2024-08-01
     date_end:
     summary: |
