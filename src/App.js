@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+/*import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"; */
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -30,13 +30,13 @@ const App = () => {
         <h1 className="text-2xl font-bold">Vineel Panyala</h1>
         <div className="flex gap-4 mt-2">
           <a href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer">
-            <FaEnvelope size={30} />
+            
           </a>
           <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={30} />
+            
           </a>
           <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer">
-            <FaGithub size={30} />
+            
           </a>
         </div>
       </motion.div>
