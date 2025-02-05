@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { motion } from "framer-motion";
+import Draggable from "react-draggable";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="h-screen w-screen flex flex-col justify-center items-center bg-gray-900 text-white">
+      <h1 className="text-4xl font-bold mb-4">Welcome to My Portfolio!</h1>
+      <Draggable>
+        <motion.div
+          className="p-10 bg-blue-500 rounded-xl cursor-pointer"
+          whileHover={{ scale: 1.1 }}
+          drag
         >
-          Learn React
-        </a>
-      </header>
+          Move Me!
+        </motion.div>
+      </Draggable>
     </div>
   );
-}
+};
 
 export default App;
