@@ -1,0 +1,8 @@
+title: "My Website"
+theme: jekyll-theme-minimal
+description:
+whatever lol
+show_downloads: false
+
+github:
+is_project_page: true
