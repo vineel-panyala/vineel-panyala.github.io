@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vineel Panyala — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface2: #21262d;
+      --border: #30363d;
+      --accent: #58a6ff;
+      --accent2: #3fb950;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --highlight: #f0883e;
+      --radius: 8px;
+      --max: 960px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 2rem;
+      height: 56px;
+      background: rgba(13,17,23,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-brand {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.95rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 6rem 2rem 4rem;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .hero-eyebrow {
+      font-family: 'Fira Code', monospace;
+      color: var(--accent);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .hero h2 {
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-weight: 400;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .hero-desc {
+      max-width: 560px;
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.6rem 1.4rem;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #0d1117;
+    }
+    .btn-primary:hover { background: #79c0ff; }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+    .hero-status {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(63,185,80,0.1);
+      border: 1px solid rgba(63,185,80,0.3);
+      border-radius: 20px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.8rem;
+      color: var(--accent2);
+      margin-bottom: 2rem;
+      width: fit-content;
+    }
+    .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--accent2);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+    .section-label {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.8rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .about-text p { color: var(--muted); margin-bottom: 1rem; }
+    .about-text p strong { color: var(--text); }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+    }
+    .stat-num {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: 'Fira Code', monospace;
+    }
+    .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+
+    /* EXPERIENCE */
+    .exp-list { display: flex; flex-direction: column; gap: 1.25rem; }
+    .exp-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .exp-card:hover { border-color: var(--accent); }
+    .exp-header {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+    .exp-company { font-weight: 700; font-size: 1.05rem; }
+    .exp-date {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .exp-role {
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .exp-bullets li {
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .exp-bullets li::before {
+      content: '▸';
+      position: absolute; left: 0;
+      color: var(--accent2);
+    }
+    .exp-bullets strong { color: var(--text); }
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 20px;
+      margin-left: 0.5rem;
+      font-weight: 600;
+    }
+    .badge-upcoming { background: rgba(240,136,62,0.15); color: var(--highlight); border: 1px solid rgba(240,136,62,0.3); }
+    .badge-current { background: rgba(63,185,80,0.15); color: var(--accent2); border: 1px solid rgba(63,185,80,0.3); }
+
+    /* SKILLS */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.25rem; }
+    .skill-group {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+    }
+    .skill-group-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .skill-tag {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 0.78rem;
+      padding: 0.2rem 0.55rem;
+      color: var(--text);
+      font-family: 'Fira Code', monospace;
+    }
+
+    /* EDUCATION */
+    .edu-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+    }
+    .edu-header {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .edu-school { font-size: 1.2rem; font-weight: 700; }
+    .edu-gpa {
+      font-family: 'Fira Code', monospace;
+      color: var(--accent2);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .edu-degree { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .edu-rows { display: flex; flex-direction: column; gap: 0.6rem; }
+    .edu-row { display: flex; gap: 0.75rem; font-size: 0.875rem; }
+    .edu-row-label { color: var(--accent); font-weight: 600; min-width: 120px; }
+    .edu-row-val { color: var(--muted); }
+
+    /* LEADERSHIP */
+    .lead-list { display: flex; flex-direction: column; gap: 1.25rem; }
+    .lead-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .lead-title { font-weight: 700; margin-bottom: 0.25rem; }
+    .lead-org { color: var(--accent); font-size: 0.875rem; margin-bottom: 0.75rem; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      display: flex; align-items: center; gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .stat-grid { grid-template-columns: 1fr 1fr; }
+      nav { padding: 0 1rem; }
+      .nav-links { gap: 1rem; }
+    }
+    @media (max-width: 480px) {
+      .nav-links { display: none; }
+    }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="#">vineel_panyala</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#education">Education</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-eyebrow">// hello world</p>
+  <div class="hero-status"><span class="dot"></span>Open to opportunities</div>
+  <h1>Vineel Panyala</h1>
+  <h2>AI & Software Engineer · Business Strategist</h2>
+  <p class="hero-desc">
+    Georgia Tech student building at the intersection of AI, product, and business.
+    I turn complex problems into measurable impact — from $1M+ in identified savings to
+    85% faster delivery cycles.
+  </p>
+  <div class="hero-btns">
+    <a class="btn btn-primary" href="mailto:vp.panyala@gmail.com">Get in touch</a>
+    <a class="btn btn-outline" href="https://linkedin.com/in/vineel-panyala" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn btn-outline" href="https://github.com/vineel-panyala" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn btn-outline" href="data/Persona_Site_Resume.pdf" target="_blank">Resume PDF</a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label">01 / about</p>
+  <h2 class="section-title">About Me</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        I'm a <strong>Georgia Tech junior</strong> studying Business Administration with a concentration
+        in IT Management (GPA 3.8), passionate about applying AI and data to real business problems.
+      </p>
+      <p>
+        I've worked as an <strong>AI intern at Ziff Davis</strong> (IGN, Speedtest, Ookla) driving
+        31% improvement in AI adoption across 45+ brands, and as a <strong>researcher at Georgia Tech</strong>
+        building open-source AI tools used by 4,000+ people.
+      </p>
+      <p>
+        Outside of work, I lead <strong>Product @ GT</strong> (500+ members) and consult for nonprofits
+        through 180 Degrees Consulting. I enjoy Lego-building, painting, and pickleball.
+      </p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-num">$1.04M</div>
+        <div class="stat-label">in annual savings identified</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">85%</div>
+        <div class="stat-label">faster delivery cycles achieved</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">4000+</div>
+        <div class="stat-label">users of AI tools I've built</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">members led at Product@GT</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <p class="section-label">02 / experience</p>
+  <h2 class="section-title">Experience</h2>
+  <div class="exp-list">
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <span class="exp-company">Deloitte <span class="badge badge-upcoming">Upcoming</span></span>
+        <span class="exp-date">June 2026</span>
+      </div>
+      <div class="exp-role">Data & AI Solutions Engineering Intern · Atlanta, GA</div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <span class="exp-company">The Home Depot <span class="badge badge-current">Current</span></span>
+        <span class="exp-date">Jan 2026 – Present</span>
+      </div>
+      <div class="exp-role">Project Lead, Business Analytics Practicum · Atlanta, GA</div>
+      <ul class="exp-bullets">
+        <li>Led workforce productivity analysis identifying <strong>$1.04M in annual non-productive labor</strong> among 559 technicians across 41 locations</li>
+        <li>Built What-If model quantifying <strong>~$650k in recoverable savings</strong> via hour recovery and overtime reduction levers</li>
+        <li>Directed team of 5 through weekly client engagements with <strong>Vice President of Finance</strong></li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <span class="exp-company">Ziff Davis Inc. <span class="badge badge-current">Current</span></span>
+        <span class="exp-date">June 2025 – Present</span>
+      </div>
+      <div class="exp-role">AI Software Development Intern · New York City, NY (Sep 2025 – Present)</div>
+      <ul class="exp-bullets">
+        <li>Streamlined cross-functional bottleneck by implementing <strong>AWS Q within Amazon Redshift</strong>, accelerating dashboard delivery by <strong>85%</strong> (2+ days → 4 hours) and reclaiming ~800 hours annually</li>
+        <li>Directed org-wide pilot of <strong>Gemini Enterprise</strong>, saving Product Team ~300+ hours annually with Jira, Confluence & Slack integrations, plus prompt library & governance framework</li>
+      </ul>
+      <div class="exp-role" style="margin-top:1rem;">AI Strategy Intern · New York City, NY (June – Aug 2025)</div>
+      <ul class="exp-bullets">
+        <li>Initiated strategic AI adoption across <strong>45+ brands</strong>, improving AI usage by <strong>31%</strong> (18% → 49%)</li>
+        <li>Consulted <strong>250+ professionals</strong> from C-Suite to Director level, developing tailored AI solutions</li>
+        <li>Formulated AI use case for HR reducing reporting workflows from <strong>3 weeks to 6 days</strong></li>
+        <li>Provided input to President of Healthcare Vertical (oversees <strong>700+ people, 14 brands</strong>) for M&A strategy</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <span class="exp-company">Georgia Institute of Technology <span class="badge badge-current">Current</span></span>
+        <span class="exp-date">Jan 2025 – Present</span>
+      </div>
+      <div class="exp-role">Lead SWE / AI Researcher · Atlanta, GA</div>
+      <ul class="exp-bullets">
+        <li>Co-developed open-source <strong>AI RAG chatbot</strong> on 80+ Invention Studio resources for 4,000+ users — received <strong>Honorable Mention</strong> at ISAM (International Symposium of Academic Makerspaces)</li>
+        <li>Led Agile team of 6, projected to save <strong>600+ staff hours ($10,200 annual labor costs)</strong></li>
+        <li>Designed AI module for Makerspace Dashboard, reducing user question escalations by <strong>38%</strong> for 120+ instructors</li>
+        <li>Presented findings at <strong>1,300+ attendee symposium</strong> to 20+ member VIP team</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-label">03 / skills</p>
+  <h2 class="section-title">Skills & Tools</h2>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <div class="skill-group-title">Languages</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">R</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">JavaScript</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">AI / ML</div>
+      <div class="skill-tags">
+        <span class="skill-tag">LLMs</span>
+        <span class="skill-tag">RAG</span>
+        <span class="skill-tag">NLP</span>
+        <span class="skill-tag">Machine Learning</span>
+        <span class="skill-tag">Agentic AI</span>
+        <span class="skill-tag">Gen-AI</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Cloud & Infra</div>
+      <div class="skill-tags">
+        <span class="skill-tag">AWS</span>
+        <span class="skill-tag">Azure</span>
+        <span class="skill-tag">Google Cloud</span>
+        <span class="skill-tag">Amazon Redshift</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Tools & Platforms</div>
+      <div class="skill-tags">
+        <span class="skill-tag">GitHub</span>
+        <span class="skill-tag">SQL Server</span>
+        <span class="skill-tag">Excel</span>
+        <span class="skill-tag">Jira</span>
+        <span class="skill-tag">Confluence</span>
+        <span class="skill-tag">Google Suite</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Certifications</div>
+      <div class="skill-tags">
+        <span class="skill-tag">AWS Cloud Practitioner</span>
+        <span class="skill-tag">Accenture Data Analytics</span>
+        <span class="skill-tag">PwC Tech Consulting</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Interests</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Lego Building</span>
+        <span class="skill-tag">Painting</span>
+        <span class="skill-tag">Pickleball</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section id="leadership">
+  <p class="section-label">04 / leadership</p>
+  <h2 class="section-title">Leadership</h2>
+  <div class="lead-list">
+    <div class="lead-card">
+      <div class="lead-title">President</div>
+      <div class="lead-org">Product @ GT · Georgia Tech</div>
+      <ul class="exp-bullets">
+        <li>Led <strong>500+ member</strong> community of Georgia Tech product & tech talent through professional development & networking</li>
+        <li>Grew event attendance by <strong>6x</strong> and reduced executive board turnover by <strong>75 percentage points</strong> (87% → 12%)</li>
+        <li>Partnered with <strong>10 corporate project partners</strong> for in-semester projects (Microsoft, Coca-Cola, Home Depot, etc.)</li>
+      </ul>
+    </div>
+    <div class="lead-card">
+      <div class="lead-title">Project Manager</div>
+      <div class="lead-org">180 Degrees Consulting · Client: Eleos Foundation</div>
+      <ul class="exp-bullets">
+        <li>Led team of 6 in implementing AI in non-profit fundraising, projected to <strong>increase revenue by ~$25,000 annually</strong></li>
+        <li>Developed AI prompt library reducing application time by <strong>~90%</strong> (5 hours → 30 minutes)</li>
+        <li>Delivered 3 key recommendations for strategic expansion supporting <strong>2x outreach increase</strong> and reduced overhead</li>
+      </ul>
+    </div>
+    <div class="lead-card">
+      <div class="lead-title">Client Acquisition Team</div>
+      <div class="lead-org">180 Degrees Consulting</div>
+      <ul class="exp-bullets">
+        <li>Sourced and managed <strong>5 project partners</strong>, supporting <strong>$30,000+ in pro-bono consulting</strong> with partner collaborations</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <p class="section-label">05 / education</p>
+  <h2 class="section-title">Education</h2>
+  <div class="edu-card">
+    <div class="edu-header">
+      <div class="edu-school">Georgia Institute of Technology</div>
+      <div class="edu-gpa">GPA: 3.8 / 4.0</div>
+    </div>
+    <div class="edu-degree">B.Sc in Business Administration · Concentration in Information Technology Management · Expected May 2027 · Atlanta, GA</div>
+    <div class="edu-rows">
+      <div class="edu-row">
+        <span class="edu-row-label">Organizations</span>
+        <span class="edu-row-val">180 Degrees Consulting (President Elect) · Product@GT (President) · GT Honors Program · AI@GT</span>
+      </div>
+      <div class="edu-row">
+        <span class="edu-row-label">Certifications</span>
+        <span class="edu-row-val">AWS Certified Cloud Practitioner · Accenture Data Analytics & Visualization · PwC Tech Consulting</span>
+      </div>
+      <div class="edu-row">
+        <span class="edu-row-label">Honors</span>
+        <span class="edu-row-val">National Merit Finalist (&lt;1% Acceptance) · Holasek-Griffiths Scholar in Business (&lt;1% Acceptance)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="mailto:vp.panyala@gmail.com">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      vp.panyala@gmail.com
+    </a>
+    <a href="https://linkedin.com/in/vineel-panyala" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      linkedin.com/in/vineel-panyala
+    </a>
+    <a href="https://github.com/vineel-panyala" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      github.com/vineel-panyala
+    </a>
+  </div>
+  <p>Built with care · Vineel Panyala © 2026</p>
+</footer>
+
+</body>
+</html>
