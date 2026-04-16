@@ -80,7 +80,7 @@
       margin-bottom: 0.5rem;
     }
     .hero h2 {
-      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
       font-weight: 400;
       color: var(--muted);
       margin-bottom: 1.5rem;
@@ -165,73 +165,52 @@
     }
 
     /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
+    .about-text { max-width: 640px; }
     .about-text p { color: var(--muted); margin-bottom: 1rem; }
     .about-text p strong { color: var(--text); }
-    .stat-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    .stat-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-    }
-    .stat-num {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--accent);
-      font-family: 'Fira Code', monospace;
-    }
-    .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
 
     /* EXPERIENCE */
-    .exp-list { display: flex; flex-direction: column; gap: 1.25rem; }
+    .exp-list { display: flex; flex-direction: column; gap: 1rem; }
     .exp-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.5rem;
+      padding: 1.25rem 1.5rem;
       transition: border-color 0.2s;
     }
     .exp-card:hover { border-color: var(--accent); }
     .exp-header {
       display: flex; justify-content: space-between; align-items: flex-start;
-      flex-wrap: wrap; gap: 0.5rem;
-      margin-bottom: 0.25rem;
+      flex-wrap: wrap; gap: 0.4rem;
+      margin-bottom: 0.2rem;
     }
     .exp-company { font-weight: 700; font-size: 1.05rem; }
     .exp-date {
       font-family: 'Fira Code', monospace;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--muted);
+      white-space: nowrap;
     }
     .exp-role {
-      color: var(--accent);
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-    }
-    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
-    .exp-bullets li {
       color: var(--muted);
-      font-size: 0.9rem;
-      padding-left: 1.2rem;
-      position: relative;
+      font-size: 0.88rem;
+      font-weight: 400;
     }
-    .exp-bullets li::before {
-      content: '▸';
-      position: absolute; left: 0;
-      color: var(--accent2);
+    .exp-location {
+      font-size: 0.8rem;
+      color: var(--muted);
+      opacity: 0.65;
+      margin-top: 0.15rem;
     }
-    .exp-bullets strong { color: var(--text); }
+    .exp-sub {
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: 0.4rem;
+    }
+    .exp-sub-role { color: var(--muted); font-size: 0.88rem; }
+    .exp-sub-date { font-family: 'Fira Code', monospace; font-size: 0.78rem; color: var(--muted); opacity: 0.65; }
     .badge {
       display: inline-block;
       font-size: 0.7rem;
@@ -275,37 +254,33 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.75rem;
+      padding: 1.5rem;
     }
     .edu-header {
       display: flex; justify-content: space-between; align-items: flex-start;
       flex-wrap: wrap; gap: 0.5rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
     }
-    .edu-school { font-size: 1.2rem; font-weight: 700; }
-    .edu-gpa {
-      font-family: 'Fira Code', monospace;
-      color: var(--accent2);
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-    .edu-degree { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .edu-school { font-size: 1.1rem; font-weight: 700; }
+    .edu-degree { color: var(--muted); font-size: 0.88rem; margin-bottom: 1.25rem; }
     .edu-rows { display: flex; flex-direction: column; gap: 0.6rem; }
     .edu-row { display: flex; gap: 0.75rem; font-size: 0.875rem; }
     .edu-row-label { color: var(--accent); font-weight: 600; min-width: 120px; }
     .edu-row-val { color: var(--muted); }
 
     /* LEADERSHIP */
-    .lead-list { display: flex; flex-direction: column; gap: 1.25rem; }
+    .lead-list { display: flex; flex-direction: column; gap: 1rem; }
     .lead-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
       border-radius: var(--radius);
-      padding: 1.5rem;
+      padding: 1.25rem 1.5rem;
+      transition: border-color 0.2s;
     }
-    .lead-title { font-weight: 700; margin-bottom: 0.25rem; }
-    .lead-org { color: var(--accent); font-size: 0.875rem; margin-bottom: 0.75rem; }
+    .lead-card:hover { border-color: var(--accent); }
+    .lead-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.2rem; }
+    .lead-role { color: var(--muted); font-size: 0.88rem; margin-bottom: 0.15rem; }
+    .lead-date { font-family: 'Fira Code', monospace; font-size: 0.78rem; color: var(--muted); opacity: 0.65; }
 
     /* FOOTER */
     footer {
@@ -378,40 +353,20 @@
 <section id="about">
   <p class="section-label">01 / about</p>
   <h2 class="section-title">About Me</h2>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>
-        I'm a <strong>Georgia Tech junior</strong> studying Business Administration with a concentration
-        in IT Management (GPA 3.8), passionate about applying AI and data to real business problems.
-      </p>
-      <p>
-        I've worked as an <strong>AI intern at Ziff Davis</strong> (IGN, Speedtest, Ookla) driving
-        31% improvement in AI adoption across 45+ brands, and as a <strong>researcher at Georgia Tech</strong>
-        building open-source AI tools used by 4,000+ people.
-      </p>
-      <p>
-        Outside of work, I lead <strong>Product @ GT</strong> (500+ members) and consult for nonprofits
-        through 180 Degrees Consulting. I enjoy Lego-building, painting, and pickleball.
-      </p>
-    </div>
-    <div class="stat-grid">
-      <div class="stat-card">
-        <div class="stat-num">$1.04M</div>
-        <div class="stat-label">in annual savings identified</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">85%</div>
-        <div class="stat-label">faster delivery cycles achieved</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">4000+</div>
-        <div class="stat-label">users of AI tools I've built</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">500+</div>
-        <div class="stat-label">members led at Product@GT</div>
-      </div>
-    </div>
+  <div class="about-text">
+    <p>
+      I'm a <strong>Georgia Tech student</strong> studying Business Administration with a concentration
+      in IT Management, passionate about applying AI and data to real business problems.
+    </p>
+    <p>
+      I've worked in <strong>AI strategy and software development at Ziff Davis</strong> (IGN, Speedtest, Ookla),
+      led analytics projects for <strong>The Home Depot</strong>, and conducted <strong>AI research at Georgia Tech</strong>
+      building open-source tools used by thousands of students.
+    </p>
+    <p>
+      Outside of work, I lead organizations at Georgia Tech and consult for nonprofits through 180 Degrees Consulting.
+      I enjoy Lego-building, painting, and pickleball.
+    </p>
   </div>
 </section>
 
@@ -424,9 +379,10 @@
     <div class="exp-card">
       <div class="exp-header">
         <span class="exp-company">Deloitte <span class="badge badge-upcoming">Upcoming</span></span>
-        <span class="exp-date">June 2026</span>
+        <span class="exp-date">Jun 2026</span>
       </div>
-      <div class="exp-role">Data & AI Solutions Engineering Intern · Atlanta, GA</div>
+      <div class="exp-role">Data & AI Solutions Engineering Intern</div>
+      <div class="exp-location">Atlanta, GA</div>
     </div>
 
     <div class="exp-card">
@@ -434,31 +390,21 @@
         <span class="exp-company">The Home Depot <span class="badge badge-current">Current</span></span>
         <span class="exp-date">Jan 2026 – Present</span>
       </div>
-      <div class="exp-role">Project Lead, Business Analytics Practicum · Atlanta, GA</div>
-      <ul class="exp-bullets">
-        <li>Led workforce productivity analysis identifying <strong>$1.04M in annual non-productive labor</strong> among 559 technicians across 41 locations</li>
-        <li>Built What-If model quantifying <strong>~$650k in recoverable savings</strong> via hour recovery and overtime reduction levers</li>
-        <li>Directed team of 5 through weekly client engagements with <strong>Vice President of Finance</strong></li>
-      </ul>
+      <div class="exp-role">Project Lead, Business Analytics Practicum</div>
+      <div class="exp-location">Atlanta, GA</div>
     </div>
 
     <div class="exp-card">
       <div class="exp-header">
         <span class="exp-company">Ziff Davis Inc. <span class="badge badge-current">Current</span></span>
-        <span class="exp-date">June 2025 – Present</span>
+        <span class="exp-date">Jun 2025 – Present</span>
       </div>
-      <div class="exp-role">AI Software Development Intern · New York City, NY (Sep 2025 – Present)</div>
-      <ul class="exp-bullets">
-        <li>Streamlined cross-functional bottleneck by implementing <strong>AWS Q within Amazon Redshift</strong>, accelerating dashboard delivery by <strong>85%</strong> (2+ days → 4 hours) and reclaiming ~800 hours annually</li>
-        <li>Directed org-wide pilot of <strong>Gemini Enterprise</strong>, saving Product Team ~300+ hours annually with Jira, Confluence & Slack integrations, plus prompt library & governance framework</li>
-      </ul>
-      <div class="exp-role" style="margin-top:1rem;">AI Strategy Intern · New York City, NY (June – Aug 2025)</div>
-      <ul class="exp-bullets">
-        <li>Initiated strategic AI adoption across <strong>45+ brands</strong>, improving AI usage by <strong>31%</strong> (18% → 49%)</li>
-        <li>Consulted <strong>250+ professionals</strong> from C-Suite to Director level, developing tailored AI solutions</li>
-        <li>Formulated AI use case for HR reducing reporting workflows from <strong>3 weeks to 6 days</strong></li>
-        <li>Provided input to President of Healthcare Vertical (oversees <strong>700+ people, 14 brands</strong>) for M&A strategy</li>
-      </ul>
+      <div class="exp-role">AI Software Development Intern</div>
+      <div class="exp-location">New York City, NY · Sep 2025 – Present</div>
+      <div class="exp-sub">
+        <span class="exp-sub-role">AI Strategy Intern · New York City, NY</span>
+        <span class="exp-sub-date">Jun 2025 – Aug 2025</span>
+      </div>
     </div>
 
     <div class="exp-card">
@@ -466,13 +412,8 @@
         <span class="exp-company">Georgia Institute of Technology <span class="badge badge-current">Current</span></span>
         <span class="exp-date">Jan 2025 – Present</span>
       </div>
-      <div class="exp-role">Lead SWE / AI Researcher · Atlanta, GA</div>
-      <ul class="exp-bullets">
-        <li>Co-developed open-source <strong>AI RAG chatbot</strong> on 80+ Invention Studio resources for 4,000+ users — received <strong>Honorable Mention</strong> at ISAM (International Symposium of Academic Makerspaces)</li>
-        <li>Led Agile team of 6, projected to save <strong>600+ staff hours ($10,200 annual labor costs)</strong></li>
-        <li>Designed AI module for Makerspace Dashboard, reducing user question escalations by <strong>38%</strong> for 120+ instructors</li>
-        <li>Presented findings at <strong>1,300+ attendee symposium</strong> to 20+ member VIP team</li>
-      </ul>
+      <div class="exp-role">Lead SWE / AI Researcher</div>
+      <div class="exp-location">Atlanta, GA</div>
     </div>
 
   </div>
@@ -548,31 +489,43 @@
   <p class="section-label">04 / leadership</p>
   <h2 class="section-title">Leadership</h2>
   <div class="lead-list">
+
     <div class="lead-card">
-      <div class="lead-title">President</div>
-      <div class="lead-org">Product @ GT · Georgia Tech</div>
-      <ul class="exp-bullets">
-        <li>Led <strong>500+ member</strong> community of Georgia Tech product & tech talent through professional development & networking</li>
-        <li>Grew event attendance by <strong>6x</strong> and reduced executive board turnover by <strong>75 percentage points</strong> (87% → 12%)</li>
-        <li>Partnered with <strong>10 corporate project partners</strong> for in-semester projects (Microsoft, Coca-Cola, Home Depot, etc.)</li>
-      </ul>
+      <div class="lead-title">180 Degrees Consulting</div>
+      <div class="lead-role">President</div>
+      <div class="lead-date">Apr 2026 – Present</div>
+      <div class="exp-sub">
+        <span class="exp-sub-role">Project Manager</span>
+        <span class="exp-sub-date">Aug 2024 – Apr 2026</span>
+      </div>
+      <div class="exp-sub">
+        <span class="exp-sub-role">Client Acquisition Team</span>
+        <span class="exp-sub-date">Aug 2024 – Aug 2025</span>
+      </div>
     </div>
+
     <div class="lead-card">
-      <div class="lead-title">Project Manager</div>
-      <div class="lead-org">180 Degrees Consulting · Client: Eleos Foundation</div>
-      <ul class="exp-bullets">
-        <li>Led team of 6 in implementing AI in non-profit fundraising, projected to <strong>increase revenue by ~$25,000 annually</strong></li>
-        <li>Developed AI prompt library reducing application time by <strong>~90%</strong> (5 hours → 30 minutes)</li>
-        <li>Delivered 3 key recommendations for strategic expansion supporting <strong>2x outreach increase</strong> and reduced overhead</li>
-      </ul>
+      <div class="lead-title">Product @ GT</div>
+      <div class="lead-role">Advisor</div>
+      <div class="lead-date">May 2026 – Present</div>
+      <div class="exp-sub">
+        <span class="exp-sub-role">President</span>
+        <span class="exp-sub-date">May 2025 – May 2026</span>
+      </div>
     </div>
+
     <div class="lead-card">
-      <div class="lead-title">Client Acquisition Team</div>
-      <div class="lead-org">180 Degrees Consulting</div>
-      <ul class="exp-bullets">
-        <li>Sourced and managed <strong>5 project partners</strong>, supporting <strong>$30,000+ in pro-bono consulting</strong> with partner collaborations</li>
-      </ul>
+      <div class="lead-title">GT Honors Program</div>
+      <div class="lead-role">Member</div>
+      <div class="lead-date">Aug 2023 – Present</div>
     </div>
+
+    <div class="lead-card">
+      <div class="lead-title">AI @ GT</div>
+      <div class="lead-role">Member</div>
+      <div class="lead-date">Aug 2023 – Present</div>
+    </div>
+
   </div>
 </section>
 
@@ -583,13 +536,13 @@
   <div class="edu-card">
     <div class="edu-header">
       <div class="edu-school">Georgia Institute of Technology</div>
-      <div class="edu-gpa">GPA: 3.8 / 4.0</div>
+      <span class="exp-date">Aug 2023 – May 2027</span>
     </div>
-    <div class="edu-degree">B.Sc in Business Administration · Concentration in Information Technology Management · Expected May 2027 · Atlanta, GA</div>
+    <div class="edu-degree">B.Sc in Business Administration · Concentration in Information Technology Management · Atlanta, GA</div>
     <div class="edu-rows">
       <div class="edu-row">
         <span class="edu-row-label">Organizations</span>
-        <span class="edu-row-val">180 Degrees Consulting (President Elect) · Product@GT (President) · GT Honors Program · AI@GT</span>
+        <span class="edu-row-val">180 Degrees Consulting · Product@GT · GT Honors Program · AI@GT</span>
       </div>
       <div class="edu-row">
         <span class="edu-row-label">Certifications</span>
@@ -597,7 +550,7 @@
       </div>
       <div class="edu-row">
         <span class="edu-row-label">Honors</span>
-        <span class="edu-row-val">National Merit Finalist (&lt;1% Acceptance) · Holasek-Griffiths Scholar in Business (&lt;1% Acceptance)</span>
+        <span class="edu-row-val">National Merit Finalist · Holasek-Griffiths Scholar in Business</span>
       </div>
     </div>
   </div>
