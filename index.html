@@ -11,15 +11,15 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0d1117;
-      --surface: #161b22;
-      --surface2: #21262d;
-      --border: #30363d;
-      --accent: #58a6ff;
-      --accent2: #3fb950;
-      --text: #e6edf3;
-      --muted: #8b949e;
-      --highlight: #f0883e;
+      --bg: #00152b;
+      --surface: #002244;
+      --surface2: #002f5f;
+      --border: #1a3a5c;
+      --accent: #EAAA00;
+      --accent2: #f5c842;
+      --text: #f0f4f8;
+      --muted: #9ab0c4;
+      --highlight: #EAAA00;
       --radius: 8px;
       --max: 960px;
     }
@@ -39,7 +39,7 @@
       display: flex; justify-content: space-between; align-items: center;
       padding: 0 2rem;
       height: 56px;
-      background: rgba(13,17,23,0.85);
+      background: rgba(0,21,43,0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
@@ -105,9 +105,10 @@
     }
     .btn-primary {
       background: var(--accent);
-      color: #0d1117;
+      color: #00152b;
+      font-weight: 600;
     }
-    .btn-primary:hover { background: #79c0ff; }
+    .btn-primary:hover { background: #f5c842; }
     .btn-outline {
       background: transparent;
       color: var(--text);
@@ -117,19 +118,19 @@
 
     .hero-status {
       display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(63,185,80,0.1);
-      border: 1px solid rgba(63,185,80,0.3);
+      background: rgba(234,170,0,0.12);
+      border: 1px solid rgba(234,170,0,0.35);
       border-radius: 20px;
       padding: 0.3rem 0.9rem;
       font-size: 0.8rem;
-      color: var(--accent2);
+      color: var(--accent);
       margin-bottom: 2rem;
       width: fit-content;
     }
     .dot {
       width: 7px; height: 7px;
       border-radius: 50%;
-      background: var(--accent2);
+      background: var(--accent);
       animation: pulse 2s infinite;
     }
     @keyframes pulse {
@@ -219,8 +220,8 @@
       margin-left: 0.5rem;
       font-weight: 600;
     }
-    .badge-upcoming { background: rgba(240,136,62,0.15); color: var(--highlight); border: 1px solid rgba(240,136,62,0.3); }
-    .badge-current { background: rgba(63,185,80,0.15); color: var(--accent2); border: 1px solid rgba(63,185,80,0.3); }
+    .badge-upcoming { background: rgba(234,170,0,0.15); color: var(--accent); border: 1px solid rgba(234,170,0,0.35); }
+    .badge-current { background: rgba(234,170,0,0.1); color: var(--accent2); border: 1px solid rgba(234,170,0,0.25); }
 
     /* SKILLS */
     .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.25rem; }
@@ -354,19 +355,10 @@
   <p class="section-label">01 / about</p>
   <h2 class="section-title">About Me</h2>
   <div class="about-text">
-    <p>
-      I'm a <strong>Georgia Tech student</strong> studying Business Administration with a concentration
-      in IT Management, passionate about applying AI and data to real business problems.
-    </p>
-    <p>
-      I've worked in <strong>AI strategy and software development at Ziff Davis</strong> (IGN, Speedtest, Ookla),
-      led analytics projects for <strong>The Home Depot</strong>, and conducted <strong>AI research at Georgia Tech</strong>
-      building open-source tools used by thousands of students.
-    </p>
-    <p>
-      Outside of work, I lead organizations at Georgia Tech and consult for nonprofits through 180 Degrees Consulting.
-      I enjoy Lego-building, painting, and pickleball.
-    </p>
+    <p>Hello! I'm a Junior at Georgia Tech majoring in Business - IT Management, minoring in Computing &amp; Intelligence. I am currently an <strong>AI Software Development Intern at Ziff Davis</strong>, <strong>Project Lead for The Home Depot</strong> - Business Analytics Practicum, and a <strong>Lead AI Researcher</strong> at the Georgia Tech Invention Studio. This upcoming summer, I will be joining <strong>Deloitte</strong> as a Data &amp; AI Solutions Engineering Intern.</p>
+    <p>On Campus, I'm the <strong>President of Product@GT</strong> and incoming <strong>President of 180 Degrees Consulting</strong>. I'm also the <strong>Executive Director of ATL Tamasha</strong>, a 501(c)(3) non-profit organization and national dance competition.</p>
+    <p>In my free time, I love traveling, trying new coffee spots, and playing pickleball.</p>
+    <p>If you have any business inquiries or would just like to chat, please feel free to connect!</p>
   </div>
 </section>
 
@@ -512,6 +504,12 @@
         <span class="exp-sub-role">President</span>
         <span class="exp-sub-date">May 2025 – May 2026</span>
       </div>
+    </div>
+
+    <div class="lead-card">
+      <div class="lead-title">ATL Tamasha</div>
+      <div class="lead-role">Executive Director · 501(c)(3) Non-Profit &amp; National Dance Competition</div>
+      <div class="lead-date">2023 – Present</div>
     </div>
 
     <div class="lead-card">
